@@ -1,0 +1,44 @@
+*{
+    font-family: 'Vazir';
+}
+body{
+    direction: rtl;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: #17A2B8;
+    box-sizing: border-box;
+}
+h1{
+    font-weight: lighter;
+    font-size: 5rem;
+}
+h4{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+input{
+    height: 34px;
+    width: 40%;
+    padding-right: 10px;
+    font-weight: lighter;
+}
+button{
+    border-style: none;
+    height: 40px;
+}
+button#leftButton{
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+   width: 80px;
+   background-color: #0069D9;
+   color: white;
+   cursor: pointer;
+}
+button#rightButton{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 40px;
+}

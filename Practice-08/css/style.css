@@ -1,0 +1,58 @@
+*{
+    font-family: 'Vazir';
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #17A2B8;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    height: 100px;
+}
+.column{
+    border: 1px solid rgba(0, 0, 0,0.5);
+    background-color: #aaa;
+    float: left;
+    width: 33.3%;
+    padding: 10px;
+    height: 400px;
+}
+#formProg{
+    color: mediumspringgreen;
+}
+.left, .right{
+    width: 20%;
+}
+.left{
+    color: blue;
+}
+.right{
+    color: seagreen;
+}
+.middle{
+    color: red;
+    width: 60%;
+}
+.product{
+    text-align: center;
+}
+.fa-envelope-square{
+    padding: 1px;
+    font-size: 30px;
+}
+#Email, #Pass, #Submit{
+    margin-top: 10px;
+}
+.footer{
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
