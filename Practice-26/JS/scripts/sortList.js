@@ -1,3 +1,5 @@
+let Incremental = 0;
+let Decremental = 1;
 let list=[];
 let maxList = 10;
 
@@ -19,10 +21,10 @@ function deleteFromList()
 function showList()
 {
     let i;
-    document.getElementById("list").innerHTML = "<b> List : </b><br><br>";
+    document.getElementById("list").innerHTML = "<b> List ("+ list.length +"): </b><br><br>";
     for(i = 0; i < list.length; i++)
     {
-        document.getElementById("list").innerHTML += "<b> N[ "+i+" ] = "+list[i]+" </b><br>";
+        document.getElementById("list").innerHTML += "<b> N[ "+ i +" ] = "+ list[i] +" </b><br>";
     }
 }
 
@@ -36,8 +38,8 @@ function sort( type )
         {
             for(j = i+1; j < list.length; j++)
             {
-                if( (type == 0 && parseInt(list[i]) > parseInt(list[j]) ) || // Incremental
-                    (type == 1 && parseInt(list[i]) < parseInt(list[j]) ) ) // Decremental
+                if( (type == Incremental && parseInt(list[i]) > parseInt(list[j]) ) || // Incremental
+                    (type == Decremental && parseInt(list[i]) < parseInt(list[j]) ) )  // Decremental
                 {   
                     listChangeIndex( i ,j );
                 }
