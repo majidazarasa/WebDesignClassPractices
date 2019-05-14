@@ -1,0 +1,13 @@
+body{
+    font-size: 1em;
+    font-weight: bold;
+    color: blue;
+}
+button{
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: blue;
+}
