@@ -1,0 +1,187 @@
+* {
+    font-family: 'Vazir';
+    font-size: 1.05em;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    background-color: lightgray;
+    box-sizing: border-box;
+}
+
+.sidenav {
+    height: 1000px;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.dropdown-btn,
+.sidenav a {
+    padding: 10px 8px 6px 10px;
+    text-decoration: none;
+    color: darkgray;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+    color: white;
+}
+
+.active {
+    background: green;
+    color: white;
+}
+
+.dropdown-container {
+    display: none;
+    background: #262626;
+    padding-left: 8px;
+}
+
+.dropdown-btn {
+    position: relative;         
+}
+
+.fa-caret-down {
+    position: absolute;
+    left: 8px;
+}
+
+div#main {
+    width: 700px;
+    height: 950px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    /* border: 1px solid blue; */
+}
+
+.divRow {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    /* border: 1px solid blue; */
+}
+
+.fa-user-circle {
+    flex: 94%;
+    font-size: 120px;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: lightgray;
+}
+
+.divRight {
+    flex: 43%;
+    margin-right: 3%;
+    /* border: 1px solid green; */
+}
+
+.divLeft {
+    flex: 43%;
+    margin-right: 3%;
+    /* border: 1px solid red; */
+}
+
+.divRowOveral{
+    flex: 97%;
+    height: 200px;
+    margin-right: 3%;
+    /* border: 1px solid blue;  */
+}
+
+.labelType1 {
+    font-size: 0.7em;
+    color: black;
+}
+
+.inputText,
+.inputTextOveral,
+.inputIconLtr,
+.inputIconRtl,
+.inputSelectRtl,
+.inputSelectLtr {
+    height: auto;
+    font-size: 0.75em;
+    border-radius: 4px;
+    border: 1px solid #D4D9DE;
+    background-color: rgb(236, 234, 234);
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.inputText {
+    width: 88%;
+    padding: 7px 10px;
+}
+
+.inputTextOveral {
+    width: 94%;
+    height: 120px;
+    padding: 7px 10px;
+}
+
+.inputIconLtr,
+.inputIconRtl {
+    width: 76%;
+    padding: 7px 10px;
+}
+
+.inputSelectRtl,
+.inputSelectLtr {
+    width: 82%;
+    padding: 6px 10px;
+}
+
+.inputIconLtr,
+.inputIconRtl,
+.inputSelectRtl,
+.inputSelectLtr {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.inputText,
+.inputIconRtl
+.inputSelectRtl {
+    text-align: right;
+}
+
+.inputIconLtr,
+.inputSelectLtr {
+    text-align: left;
+}
+
+.spanIcon {
+    width: 10%;
+    text-align: center;
+    /* vertical-align: center; */
+    border-left: 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+button {
+    margin: 10px;
+    padding: 5px 40px;
+    font-weight: bold;
+}
+

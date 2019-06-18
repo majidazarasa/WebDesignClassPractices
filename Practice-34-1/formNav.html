@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>کارتابل شخصی</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/persianDatepicker-default.css"/>
+    <link rel="stylesheet" href="css/vazir.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/persianDatepicker.js"></script>
+    <script>
+        $(function () {
+            //usage
+            $(".usage").persianDatepicker();
+
+            //themes
+            $("#pdpDefault").persianDatepicker({ alwaysShow: false, });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="#home">خانه</a>
+        <a href="#dashboard">داشبورد</a>
+        <a href="#cartable">کارتابل</a>
+        <a href="#secretariat">دبیرخانه</a>
+        <button class="dropdown-btn" onclick="">مکاتبات
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#sentLetters">نامه های ارسالی</a>
+            <a href="#recievedLetters">نامه های دریافتی</a>
+            <a href="#forwardedLetters">ارجاعات</a>
+        </div>
+        <a href="#search">جستجو</a>
+    </div>
+    <div id="main">
+        <form action="#" method="GET">
+            <div class="divRow">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="divRow">
+                <div class="divRight">
+                    <label class="labelType1">نام</label><br>
+                    <input id="fName" class="inputText" type="text">
+                </div>
+                <div class="divLeft">
+                    <label class="labelType1">نام خانوادگی</label><br>
+                    <input id="lName" class="inputText" type="text">
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divRight">
+                    <label class="labelType1">شماره پرسنلی</label><br>
+                    <span class="inputText spanIcon"><i class="fas fa-address-card"></i></span><input id="personelId"
+                        class="inputIconLtr" type="text">
+                </div>
+                <div class="divLeft">
+                    <label class="labelType1">شماره ملی</label><br>
+                    <span class="inputText spanIcon"><i class="far fa-address-card"></i></span><input id="nationalId"
+                        class="inputIconLtr" type="text">
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divRight">
+                    <label class="labelType1">نام کاربری</label><br>
+                    <span class="inputText spanIcon"><i class="fas fa-user"></i></span><input id="userName" class="inputIconLtr"
+                        type="text">
+                </div>
+                <div class="divLeft">
+                    <label class="labelType1">پست الکترونیکی</label><br>
+                    <span class="inputText spanIcon"><i class="far fa-envelope"></i></span><input id="email" class="inputIconLtr"
+                        type="text">
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divRight">
+                    <label class="labelType1">تاریخ استخدام</label><br>
+                    <span class="inputText spanIcon"><i class="fas fa-calendar"></i></span><input id="pdpDefault"
+                        class="inputIconLtr" type="text">
+                </div>
+                <div class="divLeft">
+                    <label class="labelType1">نوع استخدام</label><br>
+                    <span class="inputText spanIcon"><i class="fas fa-file-contract"></i></span><select id="employmentType"
+                        class="inputSelectRtl">
+                        <option value="0">رسمی</option>
+                        <option value="1">قراردادی</option>
+                    </select>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divRight">
+                    <label class="labelType1">محل خدمت</label><br>
+                    <span class="inputText spanIcon"><i class="fas fa-map-marker"></i></span><input id="serviceLocation" class="inputIconRtl"
+                        type="text">
+                </div>
+                <div class="divLeft">
+                    <label class="labelType1">رشته تحصیلی</label><br>
+                    <span class="inputText spanIcon"><i class="fas fa-user-graduate"></i></span><input id="EducationalMajor" class="inputIconRtl"
+                        type="text">
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divRight">
+                    <label class="labelType1">تلفن ثابت</label><br>
+                    <span class="inputText spanIcon"><i class="fas fa-phone"></i></span><input id="telFixed" class="inputIconLtr"
+                        type="text">
+                </div>
+                <div class="divLeft">
+                    <label class="labelType1">تلفن همراه</label><br>
+                    <span class="inputText spanIcon"><i class="fas fa-mobile-alt"></i></span><input id="telMobile" class="inputIconLtr"
+                        type="text">
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divRowOveral">
+                    <label class="labelType1">نشانی</label><br>
+                    <textarea id="address" class="inputTextOveral"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // debugger
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                }
+                else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+         
+        getDB_Record( "1234" );
+
+        function getDB_Record( id )
+        {
+            // debugger
+            if( id == "1234" )
+            {
+                document.getElementById("fName").value = "مجید";
+                document.getElementById("lName").value = "آذرآسا";
+                document.getElementById("personelId").value = "1234";
+                document.getElementById("nationalId").value = "0123456789";
+                document.getElementById("userName").value = "majidazarasa";
+                document.getElementById("email").value = "majidazarasa@gmail.com";
+                document.getElementById("pdpDefault").value = "1392/02/01";
+                document.getElementById("employmentType").value = "0";
+                document.getElementById("serviceLocation").value = "دفتر مرکزی";
+                document.getElementById("EducationalMajor").value = "مهندسی برق";
+                document.getElementById("telFixed").value = "02101234567";
+                document.getElementById("telMobile").value = "09120123456";
+                document.getElementById("address").value = "فردیس فلکه سوم مجتمع فنی تهران شعبه کرج";
+            }
+        }
+    </script>
+</body>
+
+</html>
