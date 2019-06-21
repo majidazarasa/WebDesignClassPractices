@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>کارتابل شخصی</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/persianDatepicker-default.css"/>
+    <link rel="stylesheet" href="css/persianDatepicker-default.css" />
     <link rel="stylesheet" href="css/vazir.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.10.1.min.js"></script>
@@ -40,91 +40,116 @@
         </div>
         <a href="#search">جستجو</a>
     </div>
-    <div id="main">
-        <form action="#" method="GET">
-            <div class="divRow">
-                <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="divRow">
-                <div class="divRight">
+    
+    <div class="divMain">
+        <div class="divRowHeader">
+            <i class="userBigIcon fas fa-user-circle"></i>
+        </div>
+        <div class="divRow">
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">نام</label><br>
-                    <input id="fName" class="inputText" type="text">
+                    <input id="fName" class="inputTextRtl" type="text">
                 </div>
-                <div class="divLeft">
+            </div>
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">نام خانوادگی</label><br>
-                    <input id="lName" class="inputText" type="text">
+                    <input id="lName" class="inputTextRtl" type="text">
                 </div>
             </div>
-            <div class="divRow">
-                <div class="divRight">
+        </div>
+        <div class="divRow">
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">شماره پرسنلی</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-address-card"></i></span><input id="personelId"
-                        class="inputIconLtr" type="text">
+                    <div class="divIcon"><i class="fas fa-address-card"></i></div><input id="personalId"
+                        class="inputTextLtrIcon" type="text">
                 </div>
-                <div class="divLeft">
+            </div>
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">شماره ملی</label><br>
-                    <span class="inputText spanIcon"><i class="far fa-address-card"></i></span><input id="nationalId"
-                        class="inputIconLtr" type="text">
+                    <div class="divIcon"><i class="far fa-address-card"></i></div><input id="nationalId"
+                        class="inputTextLtrIcon" type="text">
                 </div>
             </div>
-            <div class="divRow">
-                <div class="divRight">
+        </div>
+        <div class="divRow">
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">نام کاربری</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-user"></i></span><input id="userName" class="inputIconLtr"
-                        type="text">
-                </div>
-                <div class="divLeft">
-                    <label class="labelType1">پست الکترونیکی</label><br>
-                    <span class="inputText spanIcon"><i class="far fa-envelope"></i></span><input id="email" class="inputIconLtr"
-                        type="text">
+                    <div class="Text divIcon"><i class="fas fa-user"></i></div><input id="userName"
+                        class="inputTextRtlIcon" type="text">
                 </div>
             </div>
-            <div class="divRow">
-                <div class="divRight">
-                    <label class="labelType1">تاریخ استخدام</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-calendar"></i></span><input id="pdpDefault"
-                        class="inputIconLtr" type="text">
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
+                    <label class="labelType1">پست الکترونیکی</label><br>
+                    <div class="divIcon"><i class="far fa-envelope"></i></div><input id="email"
+                        class="inputTextLtrIcon" type="text">
                 </div>
-                <div class="divLeft">
+            </div>
+        </div>
+        <div class="divRow">
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
+                    <label class="labelType1">تاریخ استخدام</label><br>
+                    <div class="divIcon"><i class="fas fa-calendar"></i></div><input id="pdpDefault"
+                        class="inputTextLtrIcon" type="text">
+                </div>
+            </div>
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">نوع استخدام</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-file-contract"></i></span><select id="employmentType"
-                        class="inputSelectRtl">
+                    <div class="divIcon"><i class="fas fa-file-contract"></i></div><select
+                        id="employmentType" class="inputSelectRtlIcon">
                         <option value="0">رسمی</option>
                         <option value="1">قراردادی</option>
                     </select>
                 </div>
             </div>
-            <div class="divRow">
-                <div class="divRight">
+        </div>
+        <div class="divRow">
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">محل خدمت</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-map-marker"></i></span><input id="serviceLocation" class="inputIconRtl"
-                        type="text">
+                    <div class="divIcon"><i class="fas fa-map-marker"></i></div><input id="serviceLocation"
+                        class="inputTextRtlIcon" type="text">
                 </div>
-                <div class="divLeft">
+            </div>
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">رشته تحصیلی</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-user-graduate"></i></span><input id="EducationalMajor" class="inputIconRtl"
-                        type="text">
+                    <div class="divIcon"><i class="fas fa-user-graduate"></i></div><input
+                        id="EducationalMajor" class="inputTextRtlIcon" type="text">
                 </div>
             </div>
-            <div class="divRow">
-                <div class="divRight">
+        </div>
+        <div class="divRow">
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">تلفن ثابت</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-phone"></i></span><input id="telFixed" class="inputIconLtr"
-                        type="text">
+                    <div class="divIcon"><i class="fas fa-phone"></i></div><input id="telFixed"
+                        class="inputTextLtrIcon" type="text">
                 </div>
-                <div class="divLeft">
+            </div>
+            <div class="divInsideRowBox">
+                <div class="divInputBox">
                     <label class="labelType1">تلفن همراه</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-mobile-alt"></i></span><input id="telMobile" class="inputIconLtr"
-                        type="text">
+                    <div class="divIcon"><i class="fas fa-mobile-alt"></i></div><input id="telMobile"
+                        class="inputTextLtrIcon" type="text">
                 </div>
             </div>
-            <div class="divRow">
-                <div class="divRowOveral">
+        </div>
+        <div class="divRow">
+            <div class="divInsideRowBox">
+                <div class="divInputBox100">
                     <label class="labelType1">نشانی</label><br>
-                    <textarea id="address" class="inputTextOveral"></textarea>
+                    <textarea id="address" class="inputTextAreaRtl"></textarea>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 
     <script>
@@ -143,17 +168,15 @@
                 }
             });
         }
-         
-        getDB_Record( "1234" );
 
-        function getDB_Record( id )
-        {
+        getDB_Record("1234");
+
+        function getDB_Record(id) {
             // debugger
-            if( id == "1234" )
-            {
+            if (id == "1234") {
                 document.getElementById("fName").value = "مجید";
                 document.getElementById("lName").value = "آذرآسا";
-                document.getElementById("personelId").value = "1234";
+                document.getElementById("personalId").value = "1234";
                 document.getElementById("nationalId").value = "0123456789";
                 document.getElementById("userName").value = "majidazarasa";
                 document.getElementById("email").value = "majidazarasa@gmail.com";

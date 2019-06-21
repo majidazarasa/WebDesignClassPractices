@@ -6,42 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/vazir.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <form action="index.html" method="GET">
-        <div id="login">
-            <input type="radio" name="uNameRadio" checked>ورود با شماره پرسنلی <br>
-            <input type="radio" name="uNameRadio">ورود با نام کاربری <br>
-            <div class="divRow">
-                <div class="divRowOveral">
-                    <label class="labelType1">شماره پرسنلی یا نام کاربری</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-phone"></i></span><input class="inputIconLtr"
-                        type="text" value="0123456789">
-                </div><br>
-                <div class="divRowOveral">
-                    <label class="labelType1">رمز عبور</label><br>
-                    <span class="inputText spanIcon"><i class="fas fa-mobile-alt"></i></span><input class="inputIconRtl"
-                        type="text" value="09120123456">
-                </div>
+    <form action="formNav.html" method="GET" onsubmit="return login();">
+        <div class="divLogin"><br>
+            <div class="divInputBox">
+                <input class="radioBtnInput" type="radio" name="uNameRadio" checked>ورود با نام کاربری<br>
+                <input class="radioBtnInput" type="radio" name="uNameRadio">ورود با شماره پرسنلی<br>
             </div><br>
-            <button id="loginbtn" onclick="login();">ورود</button>
+            <div class="divInputBox">
+                <label class="labelType1">نام کاربری</label><br>
+                <div class="divIcon"><i class="fas fa-address-card"></i></div><input id="userName"
+                    class="inputTextLtrIcon" type="text">
+            </div><br>
+            <div class="divInputBox">
+                <label class="labelType1">شماره پرسنلی</label><br>
+                <div class="divIcon"><i class="fas fa-address-card"></i></div><input id="personalId"
+                    class="inputTextLtrIcon" type="text">
+            </div><br>
+            <div class="divInputBox">
+                <label class="labelType1">رمز عبور</label><br>
+                <div class="divIcon"><i class="far fa-address-card"></i></div><input id="pass"
+                    class="inputTextLtrIcon" type="password">
+            </div><br>
+            <input id="loginbtn" type="submit" value="ورود">
         </div>
     </form>
+
     <script>
-        let uNameType;
         let DB_uName = "majid";
         let DB_idNo = "4259";
         let DB_pass = "1234";
+        let userName, personalId, pass;
 
-        function login() {
-            if (document.getElementsByName("uNameRadio").value == 0)
-                uNameType = 0;
-            else
-                uNameType = 1;
-
+        function login() 
+        {
+            // debugger
+            userName = document.getElementById("userName").value;
+            personalId = document.getElementById("personalId").value;
+            pass = document.getElementById("pass").value;
+            if (radio[0].checked == true)
+            {
+                if( userName == DB_uName && pass == DB_pass )
+                {
+                    return true;
+                }
+                else
+                {
+                    alert("نام کاربری یا رمز عبور اشتباه است");
+                    return false;
+                }
+            }
+            else if (radio[1].checked == true){
+                if( personalId == DB_idNo && pass == DB_pass )
+                {
+                    return true;
+                }
+                else{
+                    alert("نام کاربری یا رمز عبور اشتباه است");
+                    return false;
+                }
+            }
+            return false;
         }
     </script>
 </body>

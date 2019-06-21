@@ -1,20 +1,42 @@
 * {
     font-family: 'Vazir';
-    font-size: 1.05em;
+    font-weight: normal;
+    direction: rtl;
+    text-align: right;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    direction: rtl;
-    text-align: right;
-    background-color: lightgray;
-    box-sizing: border-box;
+.divLogin {
+    font-size: 1.0em;
+    width: 40%;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 5px;
+    background-color: #FAFAFC;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.radioBtnInput{
+    margin: 7px 0px 0px 10px;
+}
+
+#loginbtn{
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    font-size: 1.0em;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 4px;
 }
 
 .sidenav {
     height: 1000px;
-    width: 200px;
+    width: 170px;
     position: fixed;
     top: 0;
     right: 0;
@@ -25,7 +47,9 @@ body {
 
 .dropdown-btn,
 .sidenav a {
-    padding: 10px 8px 6px 10px;
+    font-size: 120%;
+    margin: 0px;
+    padding: 10px 6px 6px 10px;
     text-decoration: none;
     color: darkgray;
     display: block;
@@ -48,135 +72,161 @@ body {
 
 .dropdown-container {
     display: none;
-    background: #262626;
+    background-color: #262626;
     padding-left: 8px;
 }
 
 .dropdown-btn {
-    position: relative;
+    position: relative;         
 }
 
 .fa-caret-down {
     position: absolute;
+    background-color: inherit;
     left: 8px;
 }
 
-div#main {
-    width: 700px;
-    height: 950px;
+.divMain {
+    font-size: 1.0em;
+    width: 50%;
+    height: 850px;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    background-color: rgb(245, 245, 245);
     border-radius: 5px;
-    /* border: 1px solid blue; */
+    background-color: #FAFAFC;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border: 1px solid rgb(62, 185, 40); */
 }
 
 .divRow {
     width: 100%;
     display: flex;
-    margin-top: 10px;
+    background-color: #FAFAFC;
     /* border: 1px solid blue; */
 }
 
-.fa-user-circle {
-    flex: 94%;
-    font-size: 120px;
-    padding: 0;
-    margin-top: 20px;
-    margin-bottom: 30px;
+.divRowHeader {
+    width: 100%;
+    background-color: #FAFAFC;
+    height: 180px;
+    border-radius: inherit;
     text-align: center;
-    color: lightgray;
+    /* border: 1px solid blue; */
 }
 
-.divRight {
-    flex: 43%;
-    margin-right: 3%;
-    /* border: 1px solid green; */
+.divRow {
+    height: 80px;
 }
 
-.divLeft {
-    flex: 43%;
-    margin-right: 3%;
-    /* border: 1px solid red; */
+.userBigIcon {
+    font-size: 120px;
+    margin-top: 20px;
+    color: Darkgray;
+    background-color: #FAFAFC;
 }
 
-.divRowOveral{
-    flex: 97%;
-    height: 200px;
-    margin-right: 3%;
-    /* border: 1px solid blue;  */
+.divInsideRowBox {
+    flex: 1;
+    height: auto;
+    background-color: #FAFAFC;
+    border-radius: inherit;
+    /* border: 1px solid rgb(31, 34, 31); */
+}
+
+.divInputBox{
+    width: 90%;
+    margin: 0% 5%;
+    background-color: #FAFAFC;
+    /* border: 1px solid rgb(88, 90, 90); */
+}
+
+.divInputBox100{
+    width: 95%;
+    margin: 0% 2.5%;
+    background-color: #FAFAFC;
+    /* border: 1px solid rgb(88, 90, 90); */
 }
 
 .labelType1 {
-    font-size: 0.7em;
+    font-size: 1.0em;
     color: black;
+    background-color: inherit;
 }
 
-.inputText,
-.inputTextOveral,
-.inputIconLtr,
-.inputIconRtl,
-.inputSelectRtl,
-.inputSelectLtr {
-    height: auto;
-    font-size: 0.75em;
+.divIcon {
+    font-size: 1.0em;
+    width: 15%;
+    float: right;
     border-radius: 4px;
+    margin-top: 5px;
+    padding: 5px 8px;
     border: 1px solid #D4D9DE;
     background-color: rgb(236, 234, 234);
-    margin: 0px;
+    text-align: center;
+    border-left: 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.fas, .far{
+    background-color: inherit;
+}
+
+.inputTextRtl,
+.inputTextLtr,
+.inputTextAreaRtl,
+.inputTextAreaLtr,
+.inputTextRtlIcon,
+.inputTextLtrIcon,
+.inputSelectRtlIcon,
+.inputSelectLtrIcon {
+    font-size: 1.0em;
+    float: right;
+    border-radius: 4px;
     margin-top: 5px;
+    padding: 5px 8px;
+    border: 1px solid #D4D9DE;
+    background-color: rgb(236, 234, 234);
 }
 
-.inputText {
-    width: 88%;
-    padding: 7px 10px;
+.inputSelectRtlIcon,
+.inputSelectLtrIcon {
+    padding: 4px 8px;
 }
 
-.inputTextOveral {
-    width: 94%;
+.inputTextRtl,
+.inputTextLtr {
+    width: 100%;
+}
+
+.inputTextAreaRtl,
+.inputTexAreaLtr {
+    width: 100%;
     height: 120px;
-    padding: 7px 10px;
 }
 
-.inputIconLtr,
-.inputIconRtl {
-    width: 76%;
-    padding: 7px 10px;
-}
-
-.inputSelectRtl,
-.inputSelectLtr {
-    width: 82%;
-    padding: 6px 10px;
-}
-
-.inputIconLtr,
-.inputIconRtl,
-.inputSelectRtl,
-.inputSelectLtr {
+.inputTextLtrIcon,
+.inputTextRtlIcon,
+.inputSelectRtlIcon,
+.inputSelectLtrIcon {
+    width: 85%;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
 }
 
-.inputText,
-.inputIconRtl
-.inputSelectRtl {
+.inputTextRtl,
+.inputTextRtlIcon,
+.inputSelectRtlIcon,
+.inputTextAreaRtl {
     text-align: right;
 }
 
-.inputIconLtr,
-.inputSelectLtr {
+.inputTextLtr,
+.inputTextLtrIcon,
+.inputSelectLtrIcon,
+.inputTextAreaLtr {
     text-align: left;
-}
-
-.spanIcon {
-    width: 10%;
-    text-align: center;
-    /* vertical-align: center; */
-    border-left: 0;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
 }
 
 button {
@@ -185,3 +235,38 @@ button {
     font-weight: bold;
 }
 
+@media ( max-width: 700px ){
+    .main{
+        width: 100%;
+    }
+    
+    .labelType1{
+        margin-top: 20px;
+    }
+
+    .divRow{
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .divInputBox, .divInputBox100{
+        width: 95%;
+        margin: 10px 2.5%;
+    }
+
+    .sidenav {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .dropdown-btn,
+    .sidenav a {
+        display: block;
+        padding-right: 10px;
+    }
+
+}
